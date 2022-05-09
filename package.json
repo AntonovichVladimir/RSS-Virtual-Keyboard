@@ -1,0 +1,23 @@
+{
+  "name": "rss-virtual-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-sass -w style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonovichVladimir/RSS-Virtual-Keyboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonovichVladimir/RSS-Virtual-Keyboard/issues"
+  },
+  "homepage": "https://github.com/AntonovichVladimir/RSS-Virtual-Keyboard#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

@@ -1,0 +1,124 @@
+@import "reset";
+@import "fonts";
+
+$gotham-pro: "Gotham Pro", Helvetica, sans-serif;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $gotham-pro;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #eda56b;
+}
+
+.text {
+  max-width: 1000px;
+  width: 100%;
+  &__inner {
+    width: 100%;
+    background-color: #ffe4b5;
+    height: 90px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    font-size: 2.6rem;
+    padding: 0 10px;
+    color: #1ec9c9;
+  }
+}
+
+.keyboard {
+  max-width: 1000px;
+  width: 100%;
+  background-color: #f5ef4c;
+  &__row {
+    &--english {
+      display: flex;
+    }
+    &--russian {
+      display: none;
+    }
+  }
+  &__btn {
+    width: 60px;
+    height: 60px;
+    color: #1ec9c9;
+    background-color: #ff6347;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    &--backspace {
+      width: 120px;
+    }
+    &--tab {
+      width: 90px;
+    }
+    &--capslock {
+      width: 128px;
+    }
+    &--enter {
+      width: 120px;
+    }
+
+    &--ctrl {
+    }
+    &--win {
+    }
+    &--alt {
+    }
+    &--space {
+      max-width: 458px;
+      width: 100%;
+    }
+  }
+  .keyboard__btn._active {
+    color: #7b68ee;
+    background-color: #b22222;
+  }
+  .keyboard__btn._remove {
+    animation-name: btn-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+.btn__shift {
+  &--left {
+    width: 200px;
+  }
+}
+
+@keyframes btn-animation {
+  0% {
+    background-color: #333;
+    color: #fff;
+  }
+  100% {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+._switch-language {
+  .keyboard {
+    &__row {
+      &--english {
+        display: none;
+      }
+      &--russian {
+        display: flex;
+      }
+    }
+  }
+}
